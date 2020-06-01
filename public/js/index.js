@@ -9,6 +9,8 @@ console.log(para);
 weatherForm.addEventListener('submit',(e)=> {
   e.preventDefault();
   load.style.display = "block";
+  para[0].style.display="none";
+  para[1].style.display="none";
   console.log(search.value);
   fetch('/weather?address=' + search.value)
   .then(res => res.json())
@@ -24,6 +26,8 @@ weatherForm.addEventListener('submit',(e)=> {
   load.style.display = "none";
   para[0].textContent = data.forecast;
   para[1].textContent = 'Here in ' + data.location + ' The temperature is ' + data.temperature + 'but it feels like ' + data.feelslike;
+  para[0].style.display="block";
+  para[1].style.display="block";
 
 }
   }
