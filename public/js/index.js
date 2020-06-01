@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit',(e)=> {
   console.log(data.temperature);
   load.style.display = "none";
   para[0].textContent = data.forecast;
-  para[1].textContent = 'Here in ' + data.location + ' The temperature is ' + data.temperature + 'but it feels like ' + data.feelslike;
+  para[1].textContent = 'Here in ' + data.location + '. The temperature is ' + data.temperature + ' but it feels like ' + data.feelslike;
   para[0].style.display="block";
   para[1].style.display="block";
 
